@@ -19,6 +19,7 @@ class CreateOrganizationsTable extends Migration
             $table->string('type', 30);
             $table->string('name_organization', 200)->nullable();
             $table->string('name', 150)->nullable();
+            $table->string('inn', 10)->nullable();;
             $table->string('phone_work', 25)->nullable();
             $table->string('phone_mobile', 25)->nullable();
             $table->string('phone_more', 25)->nullable();
