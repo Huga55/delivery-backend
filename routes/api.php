@@ -55,11 +55,11 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::put('/book/change', 'lk\BookController@changeAddress');
     Route::put('/book/delete', 'lk\BookController@deleteAddress');
 
-
+    Route::get('/order/lastData', 'DeliveryController@lastData');
     Route::post('/order/get', 'DeliveryController@getOrders');
     Route::get('/order/docs/{id}', 'DeliveryController@getDocsOfOrder');
     Route::post('/order/repeat', 'DeliveryController@repeatOrder');
-    Route::get('/order/lastData', 'DeliveryController@lastData');
+    //Route::get('/order/lastData', 'DeliveryController@lastData');
 
     Route::get('/record/get/{countNeed}/{currentPage}/{dateStart}/{dateFinish}/{doc_type}/{type}', 'lk\RecordController@getRecords');
 
