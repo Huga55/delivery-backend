@@ -99,6 +99,7 @@ class BookController extends Controller
 
     public function getAddress($countNeed, $currentPage, $nameFilter, $newFilter)
     {
+        return response()->json(['success' => false], 200);
         if (Auth::guard('api')->check()) {
             /**
              * После проверки уже можешь получать любое свойство модели

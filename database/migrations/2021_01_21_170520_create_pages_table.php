@@ -15,14 +15,14 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->name(string, 200)->nullable();
-            $table->title_top(string, 200)->nullable();
-            $table->title_main(string, 200)->nullable();
-            $table->title_doc(string, 200)->nullable();
-            $table->table_data(json)->nullable();
-            $table->posibility(json)->nullable();
-            $table->services(json)->nullable();
-            $table->addition(json)->nullable();
+            $table->string(name, 200)->nullable();
+            $table->string(title_top, 200)->nullable();
+            $table->string(title_main, 200)->nullable();
+            $table->string(title_doc, 200)->nullable();
+            $table->json(table_data)->nullable();
+            $table->json(posibility)->nullable();
+            $table->json(services)->nullable();
+            $table->json(addition)->nullable();
             $table->timestamps();
         });
     }
